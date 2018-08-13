@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>music player</title>
+        <link rel="stylesheet" href="music-player.css">
+        <script src="tools.js"> </script>
+    </head>
+    <body>
+        <!-- 背景 -->
+        <div class="backgroud">
+            <img src="img/Lemon.jpg" class="backgroud-picture">
+        </div>
+        <div class="player-list hidden">
+            <div> 播放列表 </div>
+            <div class="line"></div>
+            <div class="songtitle" data-path="0"> Lemon -- 米津玄師 </div>
+            <div class="line"></div>
+            <div class="songtitle" data-path="1"> Orion -- 米津玄師 </div>
+        </div>
+
+        <!-- 音乐播放器 -->
+        <div class="player">
+            <!-- 歌曲图片 -->
+            <div class="player-pictures">
+                <img src="img/Lemon.jpg" class="player-picture">
+                <!-- 进度条 -->
+                <div class="player-bar">
+                    <input type="range" class='range' value="0">
+                    <!-- 歌曲时间信息 -->
+                    <span id='nowTime'>00:00</span>
+                    <span> / </span>
+                    <span id='allTime'>00:00</span>
+                </div>
+            </div>
+            <!-- 歌曲信息 -->
+            <div class="player-song-info">
+                <span class="title"> Lemon </span>
+                <span> — </span>
+                <span class="author"> 米津玄師 </span>
+            </div>
+            <!-- 音乐文件 -->
+            <div class="player-audio">
+                <audio  id='id-player-audio' data-now=0>
+                    <source src="song/Lemon.mp3">
+                </audio>
+            </div>
+            <!-- 播放器图标 -->
+            <div class="player-control">
+                <div class="player-control-icon">
+                    <span class="player-control-icon-pre">
+                        <img src="icon/pre.png">
+                    </span>
+                    <span class="player-control-icon-play">
+                        <img src="icon/play.png">
+                    </span>
+                    <span class="player-control-icon-stop hidden">
+                        <img src="icon/stop.png">
+                    </span>
+                    <span class="player-control-icon-next">
+                        <img src="icon/next.png">
+                    </span>
+                    <span class="player-control-icon-list">
+                        <img src="icon/list.png">
+                    </span>
+                    <span class="player-control-icon-volume">
+                        <img src="icon/volume.png">
+                        <input type="range" class='volume' min="0" max="100" value="40">
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 导入 js -->
+        <script src="music-player.js"> </script>
+    </body>
+</html>
